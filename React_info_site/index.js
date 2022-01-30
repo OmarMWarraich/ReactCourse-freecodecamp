@@ -18,9 +18,17 @@ function Header() {
     </div>)
 }
 
-function Page () {
+function Footer() {
+    return (
+        <footer>
+            <small>&copy; 2022 Ovadev. All rights reserved. </small>
+        </footer>
+    )
+}
+
+function MainContent() {
     return(    <div>
-        <Header />
+        
         <h1>Fun facts about React</h1>
         <ul>
             <li>Was first released in 2013</li>
@@ -30,6 +38,18 @@ function Page () {
             <li>Powers thousands of enterprise apps, including mobile apps</li>
         </ul>
         
-    </div>
-)}
+        
+    </div>)
+}
+
+function Page () {
+    return (
+        <div>
+            <Header />
+            <MainContent />
+            <Footer />
+
+        </div>
+    )
+}
 ReactDOM.render( <Page />, document.getElementById("root"));
