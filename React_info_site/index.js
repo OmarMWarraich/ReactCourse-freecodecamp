@@ -10,9 +10,17 @@
 
 //JSX
 
-const page = (
-    <div>
-        <img src="./index.jpeg" width="40px"/>
+function Header() {
+    return (<div>
+        <header>
+            <img src="./index.jpeg" width="40px"/>    
+        </header>
+    </div>)
+}
+
+function Page () {
+    return(    <div>
+        <Header />
         <h1>Fun facts about React</h1>
         <ul>
             <li>Was first released in 2013</li>
@@ -23,5 +31,5 @@ const page = (
         </ul>
         
     </div>
-)
-ReactDOM.render(page, document.getElementById("root"));
+)}
+ReactDOM.render( <Page />, document.getElementById("root"));
