@@ -11,11 +11,18 @@
 //JSX
 
 function Header() {
-    return (<div>
+    return (
         <header>
-            <img src="./index.jpeg" width="40px"/>    
+            <nav className="nav">
+            <img src="./index.jpeg" className="nav-logo"/> 
+            <ul className="nav-items">
+                <li>Pricing</li>
+                <li>About</li>
+                <li>Content</li>
+                </ul>
+            </nav>
         </header>
-    </div>)
+    )
 }
 
 function Footer() {
