@@ -22,11 +22,11 @@ class BookList extends React.Component {
     render() {
         return (
             <div>
-            <div className="py-2.5 px-7.5 bg-blue-400 text-center">
-                <h1 className="font-normal text-white m-0">MyReads</h1>
+            <div className="py-5 px-0 bg-blue-400 text-center">
+                <h1 className="text-4xl font-medium text-white m-0">MyReads</h1>
             </div>
             
-            <div className="pt-0 px-0 pb-20 flex-1">
+            <div className="pt-0 px-0 pb-30 flex-1">
             {/*Display the three different shelves in main pages with its current books */}
             <BookShelf
                 key="currently"
@@ -47,7 +47,7 @@ class BookList extends React.Component {
                 shelfTitle="Read"
             />
             </div>
-            <div className="fixed right-6.25 bottom-6.25">
+            <div className="fixed right-20 bottom-20">
                 <Link to="/search">Add a book</Link>
             </div>
             </div>

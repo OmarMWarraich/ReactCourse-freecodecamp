@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import BookList from "./BookList";
 import * as BooksAPI from "./BooksAPI";
 
@@ -34,8 +34,12 @@ class App extends React.Component {
 render() {
   return (
     <div className="bg-lime-900">
-      {/*For current app*/}
-      <Route exact path="/" render={() => <BookList currentBooks={this.state.books} />} />
+      <Router>
+        <Routes>
+          {/*For current app*/}
+          <Route exact path="/" element={<BookList currentBooks={this.state.books} />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
