@@ -34,7 +34,7 @@ class App extends React.Component {
 
 render() {
   return (
-    <div className="bg-lime-900">
+    <div className="bg-lime-900 pb-0">
       <Router>
         <Routes>
           {/*For current app*/}

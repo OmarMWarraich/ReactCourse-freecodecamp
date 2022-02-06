@@ -26,7 +26,7 @@ class BookList extends React.Component {
                 <h1 className="text-4xl font-medium text-white m-0">MyReads</h1>
             </div>
             
-            <div className="pt-0 px-0 pb-30 flex-1">
+            <div className="pt-0 px-0 pb-0 flex-1">
             {/*Display the three different shelves in main pages with its current books */}
             <BookShelf
                 key="currently"
