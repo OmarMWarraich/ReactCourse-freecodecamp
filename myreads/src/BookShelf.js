@@ -37,9 +37,9 @@ class BookShelf extends React.Component {
                             <div className="mt-2.5 text-white text-sm pt-2 pl-0 pr-1">
                                 {book.title}
                             </div>
-                            <div className="text-red-500">
+                            <div className="text-red-500 pr-5">
                                   {book.authors &&
-                                <div className="text-red-500">
+                                <div>
                                     {book.authors[0]}
                                 </div>}
                             </div>
