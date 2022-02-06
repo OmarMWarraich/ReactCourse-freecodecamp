@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import BookList from "./BookList";
 import * as BooksAPI from "./BooksAPI";
+import BookSearch from "./BookSearch";
 
 class App extends React.Component {
   state = {
@@ -38,6 +39,7 @@ render() {
         <Routes>
           {/*For current app*/}
           <Route exact path="/" element={<BookList currentBooks={this.state.books} />} />
+          <Route exact path="/search" element={<BookSearch updateShelf={this.updateShelf} currentBooks={this.state.books} />} />
         </Routes>
       </Router>
     </div>

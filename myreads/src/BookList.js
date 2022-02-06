@@ -22,7 +22,7 @@ class BookList extends React.Component {
     render() {
         return (
             <div>
-            <div className="py-5 px-0 bg-blue-400 text-center">
+            <div className="py-3 px-0 bg-blue-400 text-center">
                 <h1 className="text-4xl font-medium text-white m-0">MyReads</h1>
             </div>
             
@@ -47,8 +47,14 @@ class BookList extends React.Component {
                 shelfTitle="Read"
             />
             </div>
-            <div className="fixed right-20 bottom-20">
-                <Link to="/search">Add a book</Link>
+            <div className="fixed right-20 bottom-20 block w-50 h-50 
+                            rounded-full bg-blue-400 bg-[url('./icons/add.svg')] bg-no-repeat bg-auto shadow-lg ">
+                <Link to="/search" className="text-white opacity-0">
+                        Add a
+                        <br/>
+                        Button
+                    </Link> 
+                
             </div>
             </div>
         );
