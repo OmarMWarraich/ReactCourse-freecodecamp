@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 import * as BooksAPI from "./BooksAPI";
 import BookShelf from "./BookShelf";
 
+/** @description: BookList Component */
+
 class BookList extends React.Component {
     state = {};
 
-    //To filter the books depending on a shelf
+    /** @function: Filter the books as per shelf*/
+    
     updateShelf = (bookId, event) => {
-        //get the book on shelf from app
+        
         let currentBooks = this.props.currentBooks;
         const book = currentBooks.filter(book => book.id === bookId)[0];
         book.shelf = event.target.value;

@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import * as BooksAPI from "./BooksAPI";
 
+/**
+ *  @description: BookSearch Component
+ *  @constructor
+ *  @type {ComponentState}
+ */
 
 class BookSearch extends React.Component {
 
@@ -13,13 +18,8 @@ class BookSearch extends React.Component {
         }
     }
 
-    /*
-            Update the shelf for each book,
-            none if the book is not on any,
-            and if id found on book shelf ,
-            then set the current book shelf. 
-    */
-
+    /** @function: update shelf data for each shelf */
+    
     updateData = (books) => {
         const cBooks = books.map(book => {
             //Locate the book
@@ -36,11 +36,8 @@ class BookSearch extends React.Component {
             })    
         }
 
-    /*
-            Read the query when user types
-            the search term.
-    */
-    
+    /** @query: Read the response when search term entered.*/
+            
      updateQuery = (query) => {
          this.setState({ query: query })
          if (query) {
@@ -54,11 +51,7 @@ class BookSearch extends React.Component {
          {this.setState({books:[]})}
      }   
     
-    /*
-            Update the shelf when shelf
-            changer button is clicked &
-            shelf is changed.
-    */
+    /** @function: Shelf updated on change of shelf/when shelf is changed  */
 
     updateBooks = (book, shelf) => {
         let current = this.state.books;

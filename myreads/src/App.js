@@ -4,24 +4,33 @@ import BookList from "./BookList";
 import * as BooksAPI from "./BooksAPI";
 import BookSearch from "./BookSearch";
 
+
+/** @description Main App component. */
+
 class App extends React.Component {
   state = {
     books: [] // To track books
   };
 
-  //Call BooksAPI.js to retrieve all books
+/**
+ *  @Lifecycle event handler called just after the app loads into the DOM.
+ *  Call the API to get all the books.
+ */  
+  
   componentDidMount() {
     this.updateData()
   }
 
-  //To handle shelf change
+  /** Update to handle shelf change*/
+
   updateShelf = (book, shelf) => {
     BooksAPI.update(book, shelf).then(response => {
       this.updateData()
     })
   }
 
-  //To update the book in the state
+  /** Update the book in the state*/
+  
   updateData = () => {
     BooksAPI.getAll().then(data => {
       this.setState({
